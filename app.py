@@ -44,7 +44,7 @@ def pretty_echo(event):
                               TextSendMessage(text=pretty_text))
 
 
-import os
+
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=80)
 
