@@ -14,6 +14,10 @@ handler = WebhookHandler(config['LineBot']['webhookhandler'])
 
 line_bot_api.push_message(config['LineBot']['username'], TextSendMessage(text='It is begining.'))
 
+@app.route("/", methods=['GET'])
+def hello():
+    return 'Hello!!!'
+    
 @app.route("/callback", methods=['POST'])
 def callback():
     signature = request.headers['X-Line-Signature']
